@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="KismetViewerController">
+   <children>
+      <MenuBar fx:id="menuBar">
+        <menus>
+          <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="openMenuItem" mnemonicParsing="false" onAction="#openMenuItemPressed" text="Open..." />
+                  <MenuItem fx:id="exportMenuItem" mnemonicParsing="false" onAction="#exportMenuItemPressed" text="Export..." />
+                  <CheckMenuItem fx:id="deleteConfirmCheckMenuItem" mnemonicParsing="false" text="Delete Confirmation" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="49.0" prefWidth="600.0">
+         <children>
+            <Label text="Search category:" translateX="11.0" translateY="26.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="statisticsButton" mnemonicParsing="false" onAction="#statisticsButtonPressed" text="Statistics" translateX="318.0">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="clientsButton" mnemonicParsing="false" onAction="#clientsButtonPressed" text="Clients" translateX="318.0">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="detailsButton" mnemonicParsing="false" onAction="#detailsButtonPressed" text="Details" translateX="318.0">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="56.0" prefWidth="600.0">
+         <children>
+            <ChoiceBox fx:id="categoryChoiceBox" prefWidth="124.0">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </ChoiceBox>
+            <TextField fx:id="searchTextField" prefWidth="130.0" promptText="Search...">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonPressed" text="Delete" translateX="318.0" translateY="23.0">
+               <padding>
+                  <Insets bottom="2.0" left="4.0" right="4.0" top="2.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+      <TableView fx:id="infoTableView" prefHeight="477.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="signalStrengthTableColumn" prefWidth="105.0" style="-fx-alignment: CENTER;" text="Signal Strength">
+               <columns>
+                  <TableColumn fx:id="lastSignalDbmTableColumn" prefWidth="36.0" text="Last" />
+                  <TableColumn fx:id="minSignalDbmTableColumn" prefWidth="36.0" text="Min" />
+                  <TableColumn fx:id="maxSignalDbmTableColumn" prefWidth="36.0" text="Max" />
+               </columns></TableColumn>
+          <TableColumn fx:id="BSSIDTableColumn" prefWidth="135.0" style="-fx-alignment: CENTER;" text="BSSID" />
+            <TableColumn fx:id="encryptionTableColumn" prefWidth="145.0" style="-fx-alignment: CENTER;" text="Encryption" />
+            <TableColumn fx:id="lastSeenTableColumn" minWidth="0.0" prefWidth="162.0" style="-fx-alignment: CENTER;" text="Last Seen" />
+            <TableColumn fx:id="numClientsTableColumn" minWidth="0.0" prefWidth="61.5" style="-fx-alignment: CENTER;" text="Clients" />
+        </columns>
+         <VBox.margin>
+            <Insets bottom="15.0" left="10.0" right="10.0" />
+         </VBox.margin>
+      </TableView>
+   </children>
+</VBox>
