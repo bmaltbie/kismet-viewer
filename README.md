@@ -12,18 +12,22 @@ This app was designed to take XML output from Kismet (scans of all nearby networ
 
 ## Home
 ![image1](https://github.com/bmaltbie/kismet-viewer/blob/master/images/home.png)
+
 The home screen shows important information about each of the networks parsed and gives the user the option to search for specific strings for a selected category or to select a specific network and find further details about them. It also gives users the option to delete the network from the table so they can view only networks they're interested in.
 
 ## Statistics
 ![image2](https://github.com/bmaltbie/kismet-viewer/blob/master/images/statistics.png)
+
 The statistics screen, a pop up opened by clicking the 'Statistics' button on the home page, opens an interactive pie chart that showcases the different encryption types from the parsed in networks.
 
 ## Details
 ![image3](https://github.com/bmaltbie/kismet-viewer/blob/master/images/details.png)
+
 The details screen shows complex details about a selected network and is a pop up opened by clicking on the 'Details' button on the home page when a network is selected in the table. Further information about the network can be found by clicking the various interactive features on the pop up.
 
 ## Clients
 ![image4](https://github.com/bmaltbie/kismet-viewer/blob/master/images/clients.png)
+
 The clients screen shows further details about the selected network, namely what clients the network was observed to have. Arrow keys provide easy ability to maneuver between clients to see more information about them.
 
 
